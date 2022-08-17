@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapty-WebApp</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+        integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+        crossorigin="" />
+    <script 
+    defer
+    src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+        integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+        crossorigin=""></script>
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <div class="sidebar">
+        <img class="img" src="/logo.png" alt="mapty-logo">
+        <ul class="workout">
+            <form class="input-container hidden" action="">
+                <div class="form-row space-btw">
+                    <label class="form-label" for="">Type: </label>
+                    <select class="form-input form-input-type">
+                        <option value="Running">Running</option>
+                        <option value="Cycling">Cycling</option>
+                    </select>
+                </div>
+                <div class="form-row ">
+                    <label class="form-label" for="">Distance: </label>
+                    <input class="form-input form_distance" placeholder="Km">
+                </div>
+                <div class="form-row">
+                    <label class="form-label" for="">Duration: </label>
+                    <input class="form-input form_Duration" name="" placeholder="min">
+                </div>
+                <div class="form-row ">
+                    <label class="form-label" for="">Cadence: </label>
+                    <input class="form-input form_condence" placeholder="Step/min">
+                </div>
+                <div class="form-row hidden">
+                    <label class="form-label" for="">Elev Gain: </label>
+                    <input class="form-input form_Elev" placeholder="meter">
+                </div>
+                <button  class="form-label hidden" class="form-input" >ok</button>
+            </form>
+
+            <li class="workouts hidden">
+                <h2 class="workout-title">Running on August 17</h2>
+                <div class="workouts-details">
+                    <span>🏃‍♂️</span>
+                    <span>💨</span>
+                    <span>3.7</span>
+                    <span>km</span>
+                </div>
+                <div class="workouts-details">
+                    <span>⏱</span>
+                    <span>20</span>
+                    <span>min</span>
+                </div>
+                <div class="workouts-details">
+                    <span>⚡</span>
+                    <span>5.4</span>
+                    <span>min/km</span>
+                </div>
+                <div class="workouts-details">
+                    <span>🦶🏼</span>
+                    <span>120</span>
+                    <span>SPM</span>
+                </div>
+            </li>
+
+
+
+            <li class="workouts Cycling-bg hidden">
+                <h2 class="workout-title">Cycling on August 15</h2>
+                <div class="workouts-details">
+                    <span>🚴🏼‍♂️</span>
+                    <span>💨</span>
+                    <span>12</span>
+                    <span>km</span>
+                </div>
+                <div class="workouts-details">
+                    <span>⏱</span>
+                    <span>75</span>
+                    <span>min</span>
+                </div>
+                <div class="workouts-details">
+                    <span>⚡</span>
+                    <span>9</span>
+                    <span>km/hr</span>
+                </div>
+                <div class="workouts-details">
+                    <span>⛰</span>
+                    <span>150</span>
+                    <span>M</span>
+                </div>
+            </li>
+        </ul>
+
+        <p class="copyright">
+            &copy; Copyright by
+            <a href="https://twitter.com/Nikhilr27526867">Nikhil Rai</a>
+        </p>
+
+    </div>
+    <div id="map"></div>
+</body>
+
+</html>
