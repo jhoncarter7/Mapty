@@ -15,7 +15,8 @@ input:focus, select {
 .sidebar {
     background-color: rgba(63, 49, 49, 0.598);
    flex-basis: 30%;
-    padding: 2rem 3rem;
+   margin: 1rem 0rem 1rem 1rem;
+   padding: 1rem 2rem;
     position: relative;
     text-align: center;
    
@@ -28,7 +29,12 @@ input:focus, select {
 }
 
 .workout{
-    transition: all 2s;
+    height: 76vh;
+  overflow-y: scroll;
+overflow-x: hidden;
+}
+.workout::-webkit-scrollbar{
+    width: 0%;
 }
 .form-row{
     display: flex;
@@ -36,7 +42,7 @@ input:focus, select {
 }
 
 .form-input {
-    width: 100%;
+    width: 38%;
     border: none;
     padding: .3rem .4rem;
     border-radius: 5%;
@@ -50,39 +56,47 @@ button {
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin-top: 1rem;
-    gap: .3rem .5rem;
     height: 14vh;
     border-left: 7px solid #FF9933;
     background-color: rgba(24, 20, 20, 0.801);
-    padding: 1rem 1.6rem;
-    margin-top: 3rem;
+    padding: 0.7rem 0.5rem;
+    margin-top: 1.7rem;
     border-radius: 4px;
-    transition: all 2s, transform 1ms;
+    transition: all .5s, transform 1ms;
 
 
 }
+.input-container.hidden{
+    transform: translateY(-30rem);
+    height: 0;
+    padding: 0 2.25rem;
+    margin-bottom: 0;
+    opacity: 0;
+}
+.Elev-hidden{
+    display: none;
+}
 
 .form-label{
-    flex: 0 0 40%;
+    flex: 0 0 50%;
     color: bisque;
-    /* font-size: 1rem; */
+    font-size: 1.1rem;
 }
 #map{
     flex: 1;
 }
 
 .workouts{
-  max-width: 100%;
+    max-width: 100%;
     height: 14vh;
-    border-left: 7px solid #FFFFFF;
-    background-color: #FF9933;
-    padding: 1rem 1.6rem;
-    margin-top: 1.1rem;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    margin-top: 1rem;
     border-radius: 4px;
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
-    gap: 1.6rem;
-    justify-items: start
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+    justify-items: start;
 }
 .workout-title{
     grid-column: 1 / -1;
@@ -91,7 +105,11 @@ button {
    display: flex;
  align-items: baseline;
 }
-.Cycling-bg{
+.workout_running {
+    border-left: 7px solid #FFFFFF;
+    background-color: #FF9933;
+}
+.workout_cycling{
     background-color:#FFFFFF;
     border-left: 7px solid #138808;
 }
@@ -106,9 +124,12 @@ button {
     text-decoration: none;
     color: rgb(40, 38, 38);
 }
-.hidden{
-    display: none;
+.btn-hidden{
+    display: none
 }
+/* .hidden{
+    ;
+} */
 /* leaflet popup editting */
 .leaflet-popup-content-wrapper {
     padding: 1px;
@@ -116,6 +137,12 @@ button {
     border-radius: 2px;
 }
 .running-popup .leaflet-popup-content-wrapper {
+    border-left: 5px solid #138808;
+    border-radius: 4px;
+    background-color:  rgba(24, 20, 20, 0.801);
+    color: white;
+}
+.cycling-popup .leaflet-popup-content-wrapper {
     border-left: 5px solid #FF9933;
     border-radius: 4px;
     background-color:  rgba(24, 20, 20, 0.801);
