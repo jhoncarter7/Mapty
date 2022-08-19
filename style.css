@@ -28,12 +28,12 @@ input:focus, select {
     
 }
 
-.workout{
+.workouts-main {
     height: 76vh;
   overflow-y: scroll;
 overflow-x: hidden;
 }
-.workout::-webkit-scrollbar{
+.workouts-main::-webkit-scrollbar{
     width: 0%;
 }
 .form-row{
